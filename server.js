@@ -1,6 +1,6 @@
 'use strict';
-
 const express     = require('express');
+const mongoose = require('mongoose')
 const bodyParser  = require('body-parser');
 const cors        = require('cors');
 require('dotenv').config();
@@ -52,5 +52,15 @@ const listener = app.listen(process.env.PORT || 3000, function () {
     }, 1500);
   }
 });
+
+let db = null;
+(async () => {
+  try {
+    db = await mongoose.connect(process.env["DB"]);
+    console.log("DB Connect: " + db.connection.name);
+  } catch (error) {
+    console.error(error);
+  }
+})();
 
 module.exports = app; //for unit/functional testing
