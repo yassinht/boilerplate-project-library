@@ -10,4 +10,4 @@ This repository showcases my **FreeCodeCamp Quality Assurance Certification** pr
 
 ---  
 
-🚀 Built with passion by [Makrem](https://github.com/yassinht)  
+🚀 Built with passion by [Yassine](https://github.com/yassinht)  
